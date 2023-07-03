@@ -13,7 +13,6 @@ const products = [
 const Kiosk = () => {
 
     const [items, setItems] = useState([]);
-    // const [current, setCurrent] = useState(null);
 
     const handleClickBuy = (product) => {
         console.log({ ...product, qty: 1 })

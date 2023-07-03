@@ -1,34 +1,29 @@
-import ZCountDlsplay from "./ZCountDlsplay";
-import ZCountPanel from "./ZCountPanel";
 import { useState } from "react";
+import ZCountDisplay from "./ZCountDisplay";
+import ZCountPanel from "./ZCountPanel";
 
 const ZCounter = () => {
 
-        const target = {
-            p1 : 'A',
-            p2 : 'B',
-            p3 : 'C',
-            p4 : 'D'
-        }
+    const target = {
+        p1: 'A',
+        p2: 'B',
+        p3: 'C',
+        p4: 'D'
+    }
 
-        const [obj, setObj] = useState({num:10})
-       
-        const changeObj = (amount) => {
-            obj.num += amount
-            setObj({...obj})
-        }
+    const [obj, setObj] = useState({num:10})
 
-        // setInterval(()=> {
-        //  changeObj(1)   
-        // },3000)
+    const changeObj = (amount) => {
+        obj.num += amount
+        setObj({...obj})
+    }
 
-        return (
+    return ( 
         <div>
-            <ZCountDlsplay value={obj.num}/>
+            <ZCountDisplay value={obj.num}/>
             <ZCountPanel fn={changeObj}/>
         </div>
-
-    );   
-   }
-   
-   export default ZCounter;
+     );
+}
+ 
+export default ZCounter;
